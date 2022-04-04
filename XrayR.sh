@@ -4,7 +4,7 @@ xrayr_install(){
     bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
 }
 
-xrayr_config(){
+xrayr_config($1,$2,$3,$4){
     wget https://github.com/yuant2007/jc_script/raw/main/XrayR_template.yml -O /etc/XrayR/config.yml
     sed -i "s/{{!PanelType!}}/$1/g" /etc/XrayR/config.yml
     sed -i "s/{{!ApiHost!}}/$2/g" /etc/XrayR/config.yml
@@ -15,4 +15,4 @@ xrayr_config(){
     XrayR restart
 }
 
-xrayr_config
+xrayr_config($1,$2,$3,$4)
