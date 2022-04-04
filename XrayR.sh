@@ -17,5 +17,5 @@ xrayr_config(){
     sed -i "s/{{!NodeID!}}/$id/g" /etc/XrayR/config.yml
     XrayR restart
 }
-
+xrayr_install
 xrayr_config
